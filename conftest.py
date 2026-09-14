@@ -16,7 +16,9 @@ def page(request):
 
     with sync_playwright() as p:
 
-        browser = p.chromium.launch(headless=False)
+        browser = p.chromium.launch(
+            headless=os.getenv("CI") == "true"
+)
 
         context = browser.new_context(
             record_video_dir="videos"
