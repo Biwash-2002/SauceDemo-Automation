@@ -393,3 +393,5 @@ I have created manual test cases for the SauceDemo application covering:
 - Checkout Testing
 
 📊 **[View / Download Manual Test Cases](./test_cases/SauceDemo%20QA%20Project.xlsx)**
+
+CI/CD configured with GitHub Actions.
