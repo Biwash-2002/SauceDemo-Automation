@@ -57,4 +57,8 @@ class CheckoutPage(BasePage):
         return self.is_visible(self.error_message)
 
     def is_thank_you_visible(self):
+        self.thank_you_message.wait_for(
+            state="visible",
+            timeout=10000
+        )
         return self.thank_you_message.is_visible()
