@@ -18,8 +18,8 @@ class CheckoutPage(BasePage):
         self.finish_button = "[data-test='finish']"
         self.error_message = "[data-test='error']"
 
-        self.thank_you_message = page.get_by_text(
-            "Thank you for your order!"
+        self.thank_you_message = page.locator(
+            ".complete-header"
         )
 
         self.backpack_add_button = (
