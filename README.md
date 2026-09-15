@@ -382,3 +382,14 @@ GitHub: [Biwash-2002](https://github.com/Biwash-2002)
 ## ⭐ Project
 
 If you find this project useful, feel free to give it a ⭐ on GitHub.
+
+## 📋 Manual Testing Documentation
+
+I have created manual test cases for the SauceDemo application covering:
+
+- Login Testing
+- Products Testing
+- Cart Testing
+- Checkout Testing
+
+📊 **[View / Download Manual Test Cases](./test_cases/SauceDemo%20QA%20Project.xlsx)**
