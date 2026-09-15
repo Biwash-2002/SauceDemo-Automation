@@ -16,9 +16,9 @@ def page(request):
 
     with sync_playwright() as p:
 
-    browser = p.chromium.launch(
-        headless=os.getenv("CI") == "true"
-    )
+        browser = p.chromium.launch(
+            headless=os.getenv("CI") == "true"
+        )
 
         context = browser.new_context(
             record_video_dir="videos"
@@ -34,7 +34,6 @@ def page(request):
 
         yield page
 
-        # Check whether test failed
         test_failed = (
             hasattr(request.node, "rep_call")
             and request.node.rep_call.failed
@@ -42,7 +41,6 @@ def page(request):
 
         if test_failed:
 
-            # Screenshot
             screenshot_path = (
                 f"screenshots/{request.node.name}.png"
             )
@@ -52,7 +50,6 @@ def page(request):
                 full_page=True
             )
 
-            # Trace
             trace_path = (
                 f"traces/{request.node.name}.zip"
             )
